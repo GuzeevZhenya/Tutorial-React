@@ -43,7 +43,7 @@ export const App = () => {
           <div>
             {tabs.map((item) => (
               <div key={item.id} className={active === item.id ? 'tab active' : 'tab'}>
-                <label htmlFor={item.inputId} onClick={() => setActive(item.id)} >
+                <label htmlFor={item.inputId} onClick={() => setActive(item.id)}>
                   {item.title}
                 </label>
                 <div className="tab-content">
