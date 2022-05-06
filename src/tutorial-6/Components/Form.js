@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import './Form.css'
 
 export const Form = ({ getReviewInfo }) => {
   const [reviews, setReview] = useState([]);
@@ -8,19 +9,20 @@ export const Form = ({ getReviewInfo }) => {
   const [textarea, setTextarea] = useState();
 
   const setComments = (e) => {
+    e.preventDefault();
+    const getDate = new Date().toLocaleString();
     const comments = {
       name,
       email,
       textarea,
+      getDate
     };
-    setReview([...reviews, comments]);
-    if (reviews.length > 0) {
-      getReviewInfo(reviews);
-    }
+    getReviewInfo(comments);
+    e.currentTarget.reset();
   };
 
   return (
-    <div>
+    <form onSubmit={setComments} className="form">
       <h1>Обратная связь</h1>
       <input
         placeholder="Имя"
@@ -40,7 +42,7 @@ export const Form = ({ getReviewInfo }) => {
         name="textarea"
         value={reviews.textarea}
       ></textarea>
-      <button onClick={setComments}>Отправить</button>
-    </div>
+      <button type="submit">Отправить</button>
+    </form>
   );
 };
