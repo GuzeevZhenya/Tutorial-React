@@ -5,10 +5,10 @@ export const App = () => {
   const [reviews, setReviews] = useState([]);
 
   const getReviewInfo = (info) => {
+    console.log(reviews);
     setReviews([...reviews, info]);
   };
 
-   
   useEffect(() => {
     const initialComments = JSON.parse(localStorage.getItem("comments"));
     setReviews(initialComments ? initialComments : []);
@@ -21,16 +21,16 @@ export const App = () => {
   const commentsList =
     reviews &&
     reviews.map((item) => (
-      <ul>
-        <li className="list-name">{item.name}</li>
-        <li>{item.textarea}</li>
-      </ul>
+      <>
+        <li className="list-name">{item.fullName}</li>
+        <li>{item.text}</li>
+      </>
     ));
 
   return (
     <div className="main">
       <h2>Отзывы</h2>
-      {commentsList}
+      <ul>{commentsList}</ul>
       <Form getReviewInfo={getReviewInfo} />
     </div>
   );

@@ -6,8 +6,11 @@ import "./index.css";
 // import { App } from './tutorial-2/app';
 // import { App } from './tutorial-3/App'
 // import { App } from './tutorial-4/App.html';
-// import { App } from './tutorial-5/App';
-import { App } from "./tutorial-6/App";
+// // import { App } from './tutorial-5/App';
+// import { App } from "./tutorial-6/App";
+import  App  from "./Routing/App";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
