@@ -1,21 +1,21 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import { posts } from "../pages/Home";
 
-export const FullPost = ({ postId }) => {
-    console.log(postId)
+export const FullPost = () => {
+  let params = useParams();
+
+  const post = posts.find((obj) => obj.id === Number(params.id));
+  console.log(post);
   return (
     <div className="full-post">
-      <h1>Статья №{postId}</h1>
-      <img src="https://source.unsplash.com/400x400" alt="Article" />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci
-        aliquam amet asperiores aut eius minima, nemo nostrum perspiciatis
-        praesentium rerum tempora temporibus vero. Fugiat illo labore maiores
-        quam sit?
-      </p>
-      <a href="/">
+      <h1>{post.title}</h1>
+      <img src={post.imageUrl} alt="Article" />
+      <p>{post.text}</p>
+      <Link to="/">
         <Button>Назад</Button>
-      </a>
+      </Link>
     </div>
   );
 };

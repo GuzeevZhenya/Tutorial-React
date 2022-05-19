@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 
 // import App from './tutorial-1/app';
 // import { App } from './tutorial-2/app';
@@ -8,13 +9,15 @@ import "./index.css";
 // import { App } from './tutorial-4/App.html';
 // // import { App } from './tutorial-5/App';
 // import { App } from "./tutorial-6/App";
-import  App  from "./Routing/App";
+import App from "./Routing/App";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
