@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form h1 {
+  font-size: 20px;
+   
+}
+
+.form input,
+textarea {
+  width: 200px;
+  margin: 5px 0;
+}
+
+.form button {
+  width: 200px;
+}
