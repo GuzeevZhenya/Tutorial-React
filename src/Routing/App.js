@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { About } from "./pages/About";
 import { Footer } from "./components/Footer";
 import { FullPost } from "./components/FullArticle";
+import { NotFound } from "./pages/NotFoud";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Home />} />
         <Route path="/post/:id" element={<FullPost />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

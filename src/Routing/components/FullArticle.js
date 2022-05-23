@@ -1,13 +1,14 @@
-import React from "react";
-import { Button } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import React,{useEffect} from "react";
+import { Button, Nav } from "react-bootstrap";
+import { Link, useParams, Navigate, useNavigate} from "react-router-dom";
 import { posts } from "../pages/Home";
 
 export const FullPost = () => {
   let params = useParams();
+  
 
   const post = posts.find((obj) => obj.id === Number(params.id));
-  console.log(post);
+
   return (
     <div className="full-post">
       <h1>{post.title}</h1>
