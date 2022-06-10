@@ -9,14 +9,15 @@ import { BrowserRouter } from "react-router-dom";
 // import { App } from './tutorial-4/App.html';
 // // import { App } from './tutorial-5/App';
 // import { App } from "./tutorial-6/App";
-import App from "./Routing/App";
+// import App from "./Routing/App";
 
+import {ReactForm} from './React-Form/ReactForm'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ReactForm />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
