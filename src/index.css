@@ -27,7 +27,11 @@ li {
   list-style: none;
 }
 
-.list-name{
+.list-name {
   font-size: 20px;
   font-weight: 400;
+}
+
+button {
+  justify-content: space-between;
 }

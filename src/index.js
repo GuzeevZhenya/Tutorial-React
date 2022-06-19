@@ -11,13 +11,14 @@ import { BrowserRouter } from "react-router-dom";
 // import { App } from "./tutorial-6/App";
 // import App from "./Routing/App";
 
-import {ReactForm} from './React-Form/ReactForm'
+// import {ReactForm} from './React-Form/ReactForm'
+import { UseFormContext } from "./Recat-useFormContext/useFormContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ReactForm />
+      <UseFormContext />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
